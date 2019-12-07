@@ -1,4 +1,6 @@
-module.exports = [
+require('dotenv').config(); // use environment variables from .env file
+
+export default [
   {
     name: 'default',
     type: 'postgres',

@@ -5,6 +5,13 @@
 ### back-end
 
 1. set up local postgres db with user: `test`, password: `test`, and database: `test`
+
+```sql
+CREATE DATABASE outrage_development;
+CREATE USER outrager WITH PASSWORD 'rage';
+GRANT ALL PRIVILEGES ON DATABASE outrage_development to outrager;
+```
+
 2. run once: `npm i`
 3. run once: `npm run migration:run`
 4. run once: `npm run seed:run`
