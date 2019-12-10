@@ -51,6 +51,7 @@ Push / deploy the codebase to the API server, as necessary:
 git push heroku-api master
 ```
 
+> NOTE, this will also run the "build" script, including database migrations and seeding the database with tweets (see the "package.json" file)
 
 
 ### deploying the front-end
