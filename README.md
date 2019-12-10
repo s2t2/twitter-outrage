@@ -29,4 +29,31 @@ will restart the server. Happy hacking!
 
 ## deploying
 
+### deploying the back-end
+
+Create a new heroku server for the backend API (i.e. "twitter-outrage-classification"). Provision a new postgresql database on that server, and note its `DATABASE_URL`.
+
+Configure a remote address corresponding to the API server:
+
+```sh
+git remote add heroku-api https://git.heroku.com/twitter-outrage-classification.git
+```
+
+Check that the database has been configured properly:
+
+```sh
+heroku config -a twitter-outrage-classification
+```
+
+Push / deploy the codebase to the API server, as necessary:
+
+```sh
+git push heroku-api master
+```
+
+
+
+### deploying the front-end
+
+
 ## api
