@@ -1,2 +1,1 @@
-api: npm run start
-client: cd src/client && npm run start
+web: npm run start

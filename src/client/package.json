@@ -40,5 +40,5 @@
     "trailingComma": "es5",
     "singleQuote": true
   },
-  "proxy": "http://localhost:3001"
+  "proxy": "https://twitter-outrage-classification.herokuapp.com/"
 }

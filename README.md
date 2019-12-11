@@ -53,6 +53,13 @@ git push heroku-api master
 
 > NOTE, this will also run the "build" script, including database migrations and seeding the database with tweets (see the "package.json" file)
 
+Start a worker process (a.k.a. "dyno") to run the api server. See the "Procfile".
+
+Checking logs:
+
+```sh
+heroku logs --tail -a twitter-outrage-classification
+```
 
 ### deploying the front-end
 
