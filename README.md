@@ -27,6 +27,17 @@
 To reiterate: the intended development flow is to get the server running, then to start the front-end dev server in `src/client` and to navigate to `http://localhost:3000` - then all changes in the client folder will automatically update the browser, and all changes to the server
 will restart the server. Happy hacking!
 
+
+
+
+
+
+
+
+
+
+<hr>
+
 ## deploying
 
 ### deploying the back-end
@@ -71,15 +82,15 @@ Configure a remote address corresponding to the API server:
 git remote add heroku-app https://git.heroku.com/moral-outrage.git
 ```
 
-We want to deploy only what's in the "src/client" directory to that server, so we need to use "subtree" in our deployment command. Push / deploy the client app codebase to the app server, as necessary:
+We want to deploy only what's in the "src/client" directory to that server, so we need to [use "subtree" in our deployment command](https://stackoverflow.com/questions/7539382/how-can-i-deploy-push-only-a-subdirectory-of-my-git-repo-to-heroku). Push / deploy the client app codebase to the app server, as necessary:
 
 ```sh
 git subtree push --prefix src/client heroku-app master
 ```
 
-> NOTE, this will also run the "build" script, including database migrations and seeding the database with tweets (see the "package.json" file)
+> NOTE, this will also run the "build" script (see the "src/client/package.json" file)
 
-Start a worker process (a.k.a. "dyno") to run the api server. See the "Procfile".
+Start a worker process (a.k.a. "dyno") to run the app server. See the "Procfile".
 
 Checking logs:
 
