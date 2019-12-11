@@ -82,6 +82,12 @@ Configure a remote address corresponding to the API server:
 git remote add heroku-app https://git.heroku.com/moral-outrage.git
 ```
 
+Configure the production app to use the production API server:
+
+```sh
+heroku config:set HOST="https://twitter-outrage-classification.herokuapp.com" -a moral-outrage
+```
+
 We want to deploy only what's in the "src/client" directory to that server, so we need to [use "subtree" in our deployment command](https://stackoverflow.com/questions/7539382/how-can-i-deploy-push-only-a-subdirectory-of-my-git-repo-to-heroku). Push / deploy the client app codebase to the app server, as necessary:
 
 ```sh
