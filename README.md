@@ -53,6 +53,8 @@ git remote add heroku-api https://git.heroku.com/twitter-outrage-classification.
 Check that the database has been configured properly:
 
 ```sh
+
+
 heroku config -a twitter-outrage-classification
 ```
 

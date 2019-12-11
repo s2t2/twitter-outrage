@@ -39,5 +39,6 @@
   "prettier": {
     "trailingComma": "es5",
     "singleQuote": true
-  }
+  },
+  "proxy": "https://twitter-outrage-classification.herokuapp.com"
 }
