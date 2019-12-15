@@ -31,4 +31,15 @@ DATABASE_URL="postgresql://outrager:rage@localhost:5432/outrage_development" npm
 To reiterate: the intended development flow is to get the server running, then to start the front-end dev server in `src/client` and to navigate to `http://localhost:3000` - then all changes in the client folder will automatically update the browser, and all changes to the server
 will restart the server. Happy hacking!
 
+```sh
+API_BASE_URL="http://localhost:3001" npm run start
+#> Access to fetch at 'http://localhost:3001/api/tweets' from origin 'http://localhost:3000' has been blocked by CORS policy:
+#> No 'Access-Control-Allow-Origin' header is present on the requested resource.
+#> If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+#> App.tsx:48 Uncaught (in promise) TypeError: Failed to fetch
+
+
+API_BASE_URL="https://twitter-outrage-classification.herokuapp.com" npm run start
+```
+
 ## [Deploying](DEPLOYING.md)
