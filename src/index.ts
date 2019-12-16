@@ -2,8 +2,7 @@ import 'reflect-metadata';
 import * as path from 'path';
 import { createConnection } from 'typeorm';
 import * as Koa from 'koa';
-const cors = require('@koa/cors');
-//import * as cors from 'koa-cors';
+const cors = require('@koa/cors'); //import * as cors from 'koa-cors';
 import * as Router from 'koa-router';
 import * as bodyParser from 'koa-bodyparser';
 import * as serve from 'koa-static';
@@ -27,7 +26,8 @@ createConnection()
       await send(ctx, 'src/client/build/index.html');
     });
 
-    app.use(cors());
+    //app.use(cors());
+    app.use(cors({allowMethods:["GET", "POST"]}));
     app.use(bodyParser());
     app.use(serve(path.join(__dirname, '/client/build')));
     app.use(router.routes());

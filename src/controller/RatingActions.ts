@@ -3,11 +3,14 @@ import { getRepository } from './utils';
 import { Rating } from '../entity/Rating';
 
 const createRating = async (ctx: Context) => {
+  console.log("CREATE RATING...")
   const {
     outrageous,
     tweetId,
     subjectId = 'default-subject-id',
   } = ctx.request.body;
+
+  console.log([outrageous, tweetId, subjectId])
 
   await getRepository(Rating).query(
     `
