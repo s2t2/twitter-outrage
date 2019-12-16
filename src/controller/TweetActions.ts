@@ -10,6 +10,8 @@ const getTweets = async (ctx: Context) => {
     cache: 3600000,
   });
 
+  console.log("TWEETS RESPONSE", tweets.length)
+
   ctx.body = sampleSize(tweets, 30);
 };
 

@@ -43,7 +43,7 @@ class App extends Component<IAppProps, IAppState> {
 
   async componentDidMount() {
     const tweets = await this.getTweets();
-
+    console.log("FETCHED TWEETS", tweets.length)
     this.setState({ tweets });
   }
 
