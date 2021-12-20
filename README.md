@@ -12,6 +12,10 @@
 6. any changes to server code will cause an automatic server restart
 7. when developing locally, there is no need to build the front-end and navigate to `http://localhost:3001` in the browser - the front-end dev server will proxy api requests there
 
+```sh
+DATABASE_URL="postgresql://outrager:rage@localhost:5432/outrage_development" npm run dev
+```
+
 #### database schema edits
 
 #### tweets data
@@ -27,6 +31,4 @@
 To reiterate: the intended development flow is to get the server running, then to start the front-end dev server in `src/client` and to navigate to `http://localhost:3000` - then all changes in the client folder will automatically update the browser, and all changes to the server
 will restart the server. Happy hacking!
 
-## deploying
-
-## api
+## [Deploying](DEPLOYING.md)
