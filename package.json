@@ -9,6 +9,7 @@
     "@types/koa-static": "^4.0.1",
     "@types/lodash.samplesize": "^4.2.6",
     "@types/node": "^12.12.12",
+    "dotenv": "^8.2.0",
     "koa": "^2.11.0",
     "koa-bodyparser": "^4.2.1",
     "koa-router": "^7.4.0",
